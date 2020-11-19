@@ -5,6 +5,7 @@
 //  Created by Anasuya Polu on 2020-11-19.
 //
 
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct DetailsRow: View {
@@ -14,12 +15,24 @@ struct DetailsRow: View {
         self.details = details
     }
     
+    private var imageUrl: URL? {
+        if let encoded = self.details.imageHref?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+           let url = URL(string: encoded) {
+            return url
+        }
+        else {
+            return nil
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .top, spacing: 10) {
-                Text("")
+                WebImage(url: self.imageUrl)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50, alignment: .leading)
-                    .background(WColors.Black)
+                    .background(WColors.BrownGray)
                     .cornerRadius(10)
                     .clipped()
                 
