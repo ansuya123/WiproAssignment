@@ -64,7 +64,7 @@ struct CountryView: View {
             .frame(width: 44, height: 44, alignment: .center)
             .padding(.trailing, 10)
         }
-        .frame(width: UIScreen.main.bounds.size.width, height: 64, alignment: .center)
+        .frame(height: 64, alignment: .center)
         .background(WColors.White)
         .shadow(color: WColors.Black16.opacity(0.16), radius: 4, x: 0, y: 3)
     }
