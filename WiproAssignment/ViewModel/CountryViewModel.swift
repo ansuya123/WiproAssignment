@@ -11,6 +11,7 @@ class CountryViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var rows: [Details] = []
     @Published var errorMessage: String = ""
+    @Published var showAlert: Bool = false
 }
 
 extension CountryViewModel {
@@ -28,6 +29,7 @@ extension CountryViewModel {
             case .failure(let error):
                 debugPrint("error", error.localizedDescription)
                 self.errorMessage = error.localizedDescription
+                self.showAlert = true
             }
         }
     }
