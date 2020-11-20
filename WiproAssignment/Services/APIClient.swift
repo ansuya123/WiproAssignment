@@ -15,7 +15,7 @@ class APIClient {
         return Singleton.instance
     }
     
-    func request<Success: Decodable, Failure: Decodable>(_ path: String, method: HTTPMethod = .GET, parameters: Parameters? = nil, successClass: Success.Type, failureErrorClass: Failure.Type, onCompletion completion: ((Result<Success, WError<Failure>>) -> Void)?) {
+    private func request<Success: Decodable, Failure: Decodable>(_ path: String, method: HTTPMethod = .GET, parameters: Parameters? = nil, successClass: Success.Type, failureErrorClass: Failure.Type, onCompletion completion: ((Result<Success, WError<Failure>>) -> Void)?) {
         
         debugPrint("API : \(Service.Server.baseURL + path)", method.rawValue)
         debugPrint("Parameters : \(String(describing: parameters))\n")
@@ -58,5 +58,19 @@ class APIClient {
             }
         })
         task.resume()
+    }
+}
+
+extension APIClient {
+    func getCountyDetails(onCompletion completion: ((Result<APIResponse, BasicError>) -> Void)?) {
+        let request = APIRouter.getDetails
+        APIClient.shared.request(request.path, method: request.method, parameters: request.parameters, successClass: APIResponse.self, failureErrorClass: BasicErrorResponseModel.self) { result in
+            switch result {
+            case .success(let response):
+                completion?(.success(response))
+            case .failure(let error):
+                completion?(.failure(error))
+            }
+        }
     }
 }

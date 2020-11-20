@@ -27,6 +27,7 @@
 		9E3F8BFA2566AD4300F2F763 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F8BF92566AD4300F2F763 /* Constants.swift */; };
 		9E3F8C062566B04000F2F763 /* DetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F8C052566B04000F2F763 /* DetailsRow.swift */; };
 		9E3F8C0E2566B8D300F2F763 /* WError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3F8C0D2566B8D300F2F763 /* WError.swift */; };
+		9E48B2422567C84800FD2307 /* CountryViewTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48B2412567C84800FD2307 /* CountryViewTestClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		9E3F8BF92566AD4300F2F763 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9E3F8C052566B04000F2F763 /* DetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRow.swift; sourceTree = "<group>"; };
 		9E3F8C0D2566B8D300F2F763 /* WError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WError.swift; sourceTree = "<group>"; };
+		9E48B2412567C84800FD2307 /* CountryViewTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewTestClass.swift; sourceTree = "<group>"; };
 		A5BB6250FC5C2E8BE5E19C19 /* Pods-WiproAssignment-WiproAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiproAssignment-WiproAssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-WiproAssignment-WiproAssignmentUITests/Pods-WiproAssignment-WiproAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA7E144464BD06607C4B76B8 /* Pods-WiproAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiproAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-WiproAssignmentTests/Pods-WiproAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBDCFE7A7C16EE99D0A0714C /* Pods_WiproAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiproAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 		9E3F8BAC2566A1DC00F2F763 /* WiproAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				9E48B2412567C84800FD2307 /* CountryViewTestClass.swift */,
 				9E3F8BAD2566A1DC00F2F763 /* WiproAssignmentTests.swift */,
 				9E3F8BAF2566A1DC00F2F763 /* Info.plist */,
 			);
@@ -516,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E48B2422567C84800FD2307 /* CountryViewTestClass.swift in Sources */,
 				9E3F8BAE2566A1DC00F2F763 /* WiproAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,7 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8A2R43Y6Y;
 				INFOPLIST_FILE = WiproAssignmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -747,7 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8A2R43Y6Y;
 				INFOPLIST_FILE = WiproAssignmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

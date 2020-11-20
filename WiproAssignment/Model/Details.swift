@@ -25,7 +25,7 @@ class Details: Codable {
     }
 }
 
-class APIReponse: Codable {
+class APIResponse: Codable {
     var title: String
     var rows: [Details]
     

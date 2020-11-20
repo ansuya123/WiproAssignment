@@ -16,8 +16,7 @@ class CountryViewModel: ObservableObject {
 
 extension CountryViewModel {
     func getDetails() {
-        let request = APIRouter.getDetails
-        APIClient.shared.request(request.path, method: request.method, parameters: request.parameters, successClass: APIReponse.self, failureErrorClass: BasicErrorResponseModel.self) { [weak self]  result in
+        APIClient.shared.getCountyDetails { [weak self] result in
             guard let self = self else {
                 return
             }
