@@ -24,7 +24,7 @@ extension CountryViewModel {
             case .success(let response):
                 debugPrint("response", response.title, response.rows.count)
                 self.title = response.title
-                self.rows = response.rows
+                self.rows = response.rows.filter({!($0.imageHref?.isEmpty ?? false) && !($0.title?.isEmpty ?? false) && !($0.description?.isEmpty ?? false)})
             case .failure(let error):
                 debugPrint("error", error.localizedDescription)
                 self.errorMessage = error.localizedDescription

@@ -27,7 +27,7 @@ struct DetailsRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack(alignment: .top, spacing: 10) {
+            HStack(alignment: .center, spacing: 20) {
                 WebImage(url: self.imageUrl)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -36,7 +36,7 @@ struct DetailsRow: View {
                     .cornerRadius(10)
                     .clipped()
                 
-                VStack(spacing: 10) {
+                VStack(spacing: 5) {
                     Text(details.title ?? "")
                         .foregroundColor(WColors.Black)
                         .font(Font.system(size: 16, weight: .bold, design: .default))
